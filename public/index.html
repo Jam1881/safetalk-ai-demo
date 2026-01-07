@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SafeTalk AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>SafeTalk AI</h1>
+    <p class="subtitle">A calm space to talk, reflect, and feel heard.</p>
+
+    <div class="chat-box" id="chatBox">
+      <div class="bot">Hello. I'm here to listen. You can say anything.</div>
+    </div>
+
+    <input 
+      type="text" 
+      id="userInput" 
+      placeholder="Type your message..."
+      onkeydown="if(event.key==='Enter') sendMessage()"
+    />
+
+    <button onclick="sendMessage()">Send</button>
+
+    <button class="secondary" onclick="window.location.href='/human.html'">
+  Talk to a live volunteer (W.I.P)
+</button>
+
+    <p class="note">
+      This chatbot offers supportive conversation, not professional care. If you need more help, reaching out to a trusted person or professional may be beneficial.
+    </p>
+  </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
