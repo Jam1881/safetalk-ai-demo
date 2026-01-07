@@ -1,16 +1,13 @@
 const consentOverlay = document.getElementById("consentOverlay");
 const confirmBtn = document.getElementById("confirmConsent");
 
-// Check if user already consented
-if (localStorage.getItem("safetalkConsent") === "true") {
-  consentOverlay.style.display = "none";
-}
+// Always show consent on page load
+consentOverlay.style.display = "flex";
 
-// Confirm consent
 confirmBtn.addEventListener("click", () => {
-  localStorage.setItem("safetalkConsent", "true");
   consentOverlay.style.display = "none";
 });
+
 
 const chatBox = document.getElementById("chatBox");
 const userInput = document.getElementById("userInput");
