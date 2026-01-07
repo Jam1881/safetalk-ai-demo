@@ -121,3 +121,48 @@ button:hover {
   margin-bottom: 8px;
 }
 
+/* Consent overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal {
+  background: white;
+  padding: 24px;
+  max-width: 420px;
+  width: 90%;
+  border-radius: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.modal h2 {
+  margin-top: 0;
+}
+
+.modal p {
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.modal .small {
+  font-size: 12px;
+  color: #666;
+}
+
+.modal button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #4a6cf7;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+

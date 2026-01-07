@@ -1,3 +1,17 @@
+const consentOverlay = document.getElementById("consentOverlay");
+const confirmBtn = document.getElementById("confirmConsent");
+
+// Check if user already consented
+if (localStorage.getItem("safetalkConsent") === "true") {
+  consentOverlay.style.display = "none";
+}
+
+// Confirm consent
+confirmBtn.addEventListener("click", () => {
+  localStorage.setItem("safetalkConsent", "true");
+  consentOverlay.style.display = "none";
+});
+
 const chatBox = document.getElementById("chatBox");
 const userInput = document.getElementById("userInput");
 
@@ -48,7 +62,7 @@ async function sendMessage() {
     removeTyping();
     addMessage(
       "bot",
-      "I’m having trouble responding right now. That’s okay — you can try again later."
+      "I’m having trouble responding right now. That’s okay, you can try again later."
     );
   }
 }
